@@ -20,7 +20,6 @@ public final class GeneticAlgorithmFunction {
         child[0] = new Genome(a.getSize());
         child[1] = new Genome(a.getSize());
         int point = ThreadLocalRandom.current().nextInt(1, a.getSize());
-        System.out.println(point);
         int i = 0;
         for(; i < point; i++){
             child[0].setChoice(i, a.get(i));

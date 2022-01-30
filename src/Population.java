@@ -10,10 +10,10 @@ public class Population {
     public Population(int psize, int gsize) {
         this.psize = psize;
         this.gsize = gsize;
+        genomes = new ArrayList<Genome>(gsize);
     }
 
     public void generatePopulation(){
-        genomes = new ArrayList<Genome>(gsize);
         for(int i = 0; i < psize; i++) {
             Genome genome = new Genome(gsize);
             genome.initialize();
@@ -43,6 +43,10 @@ public class Population {
     public void add(Genome genome){
         genomes.add(genome);
         psize++;
+    }
+
+    public void setSize(int psize){
+        this.psize = psize;
     }
 
     @Override
